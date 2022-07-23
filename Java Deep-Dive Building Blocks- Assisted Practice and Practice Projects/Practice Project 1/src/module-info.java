@@ -1,0 +1,3 @@
+module ArithmeticCalculator {
+	exports ArithmeticCalculator;
+}
