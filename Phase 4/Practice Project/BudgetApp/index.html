@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+  </head>
+  <body>
+    <div>
+      <div class="well">
+        <h1 style="text-align: center">Team Budget Planner</h1>
+        <div
+          style="display: flex; font-weight: 700; justify-content: space-evenly"
+        >
+          <div style="text-align: center">
+            <h2>Budget</h2>
+            <span class="glyphicon glyphicon-piggy-bank"></span>
+            <p style="color: rgba(23, 216, 23, 0.808); font-size: 20px">
+              ₹ <span id="budgetAmount">0</span>
+            </p>
+          </div>
+          <div style="text-align: center">
+            <h2>Expenses</h2>
+            <span class="glyphicon glyphicon-scissors"></span>
+            <p style="color: red; font-size: 20px">
+              ₹ <span id="expensesAmount">0</span>
+            </p>
+          </div>
+          <div style="text-align: center">
+            <h2>Balance</h2>
+            <span class="glyphicon glyphicon-briefcase"></span>
+            <p style="color: green; font-size: 20px">
+              ₹ <span id="balanceAmount">0</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    
+    </div>
+    <div style="display: flex;justify-content: space-around;">
+      <div style="display: flex;width: 50%;
+      display: flex;
+      flex-direction: column;">
+        <div style="
+        text-align: center;
+        float:right;" >
+        <div id="overBudget" style="display: none;">
+            <h2>Alert</h2>
+            <div class="alert alert-danger">
+              <strong>Gone Over Budget</strong> 
+            </div>
+        </div>
+        <div id="underBudget" style="display: none;">
+            <div class="alert alert-success">
+                <strong>Savings goal reached !!!</strong> 
+              </div>
+        </div>
+      </div>
+        <div id="table-value" style="display: none;">
+            <table class="table table-bordered">
+               <thead>
+                 <tr>
+                   <th>Expenses</th>
+                   <th>Expence Amount</th>
+                  </tr>
+               </thead>
+               <tbody>
+                 <tr>
+                   <td>Technical staff resource estimates amount</td>
+                   <td id="table-tech">2</td>
+                 </tr>
+                 <tr>
+                   <td>Non-technical staff resource estimates amountv</td>
+                   <td id="table-nontech">2</td>
+                 </tr>
+                 <tr>
+                   <td>Equipment and Material estimates amount</td>
+                   <td id="table-equipment">2</td>
+                </tr>
+                <tr>
+                 <td>Other Expenses</td>
+                  <td id="table-other">2</td>
+                 </tr>
+               </tbody>
+             </table>
+           </div>
+       
+           </div>
+              <div id="piechart"></div>
+          
+         
+    </div>
+
+    <div style="position: fixed; right: 0; bottom: 18px">
+      <button
+        type="button"
+        class="btn btn-info btn-lg"
+        data-toggle="modal"
+        data-target="#myModal"
+        style="margin-right: 20px"
+      >
+        Add Budget
+      </button>
+    </div>
+
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h4 class="modal-title">Add Budet and estimates</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="">Add Budget Amount</label> <br />
+                <input type="text" id="budget" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="">Technical staff resource estimates amount</label>
+                <br />
+                <input type="text" id="techStaff" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for=""
+                  >Non-technical staff resource estimates amount</label
+                >
+                <br />
+                <input type="text" id="nonTechStaff" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="">Equipment and Material Estimated Amount</label>
+                <br />
+                <input type="text" id="equipments" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="">Other expense</label> <br />
+                <input type="text" id="other" class="form-control" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-default"
+              data-dismiss="modal"
+              onclick="calculateBudget()">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
