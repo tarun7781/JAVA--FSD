@@ -1,0 +1,61 @@
+{
+  "posts": [
+    {
+      "id": 3,
+      "firstName": "Sebastian",
+      "lastName": "Eschweiler",
+      "email": "sebastian@codingthesmartway.com",
+      "mobile": "12345678",
+      "salary": "35000"
+    },
+    {
+      "id": 4,
+      "firstName": "Steve",
+      "lastName": "Palmer",
+      "email": "steve@codingthesmartway.com",
+      "mobile": "123654987",
+      "salary": "40000"
+    },
+    {
+      "id": 5,
+      "firstName": "Ann",
+      "lastName": "Smith",
+      "email": "ann@codingthesmartway.com",
+      "mobile": null,
+      "salary": null
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "Tarun",
+      "email": "tarun@gmail.com",
+      "password": "123456",
+      "mobile": 8573872658,
+      "id": 1
+    },
+    {
+      "fullname": "Tarun",
+      "email": "tarun@gmail.com",
+      "password": "Msd@7781",
+      "mobile": 9849033883,
+      "id": 4
+    },
+    {
+      "fullname": "Tarun",
+      "email": "tarun@gmail.com",
+      "password": "Msd@7781",
+      "mobile": 9000099373,
+      "id": 5
+    },
+    {
+      "fullname": "Tarun",
+      "email": "tarun@gmail.com",
+      "password": "123456",
+      "mobile": 8573872658,
+      "id": 6
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
